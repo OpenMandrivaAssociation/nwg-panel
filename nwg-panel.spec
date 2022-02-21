@@ -9,22 +9,23 @@ Source:     https://github.com/nwg-piotr/nwg-panel/archive/refs/tags/v%{version}
  
 BuildRequires: pkgconfig(python)
 BuildRequires: python3dist(setuptools)
+BuildRequires: pkgconfig(gtk-layer-shell-0)
 BuildArch:  noarch
  
-Requires:   gtk-layer-shell
-Requires:   gtk3
-Requires:   python-gobject
-Requires:   python-i3ipc
-Requires:   wlr-randr
+Requires:   typelib(GtkLayerShell)
+Requires:   gtk+3.0
+Requires:   python-gobject3
+Requires:   python-gi
+Requires:   python3dist(i3ipc)
+# Missing in OMV
+#Requires:   wlr-randr
+#Recommends: light
+#Recommends: playerctl
+#Recommends: pamixer
+Recommends: python3dist(netifaces)
+Recommends: python3dist(psutil)
+Recommends: python3dist(pybluez)
  
-Recommends: light
-Recommends: playerctl
-Recommends: python3-netifaces
-Recommends: python3-psutil
-Recommends: python3-pybluez
- 
-### Not packaged
-# Recommends: pamixer
  
 %description
 I have been using sway since 2019 and find it the most comfortable working
@@ -72,5 +73,5 @@ done
 %{_bindir}/%{name}
 %{_bindir}/%{name}-config
 %{_bindir}/nwg-dwl-interface
-%{python_sitelib}/%{sys_name}-%{version}-py%{python3_version}.egg-info/
-%{python_sitelib}/%{sys_name}/
+%{python_sitelib}/nwg_panel-%{version}-py%{python_version}.egg-info/
+%{python_sitelib}/nwg_panel/
