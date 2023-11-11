@@ -1,5 +1,5 @@
 Name:       nwg-panel
-Version:    0.6.1
+Version:    0.9.17
 Release:    1
 Summary:    GTK3-based panel for sway window manager
 Group:      System/X11/Utilities/NWG 
@@ -73,5 +73,6 @@ done
 %{_bindir}/%{name}
 %{_bindir}/%{name}-config
 %{_bindir}/nwg-dwl-interface
+%{_bindir}/nwg-processes
 %{python_sitelib}/nwg_panel-%{version}-py%{python_version}.egg-info/
 %{python_sitelib}/nwg_panel/
