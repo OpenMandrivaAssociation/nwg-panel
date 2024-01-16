@@ -17,8 +17,8 @@ Requires:   gtk+3.0
 Requires:   python-gobject3
 Requires:   python-gi
 Requires:   python3dist(i3ipc)
+Requires:   wlr-randr
 # Missing in OMV
-#Requires:   wlr-randr
 #Recommends: light
 #Recommends: playerctl
 #Recommends: pamixer
