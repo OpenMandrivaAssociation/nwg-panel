@@ -1,5 +1,5 @@
 Name:       nwg-panel
-Version:    0.9.21
+Version:    0.9.22
 Release:    1
 Summary:    GTK3-based panel for sway window manager
 Group:      System/X11/Utilities/NWG 
