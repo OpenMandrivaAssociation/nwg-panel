@@ -43,8 +43,8 @@ you may need, there's an executor for that.
 %prep
 %autosetup -p1
  
-sed -i 's|#!/usr/bin/python|#!/usr/bin/python3|' \
-    nwg_panel/executors/arch_updates.py
+#sed -i 's|#!/usr/bin/python|#!/usr/bin/python3|' \
+#    nwg_panel/executors/arch_updates.py
  
  
 %build
@@ -52,21 +52,7 @@ sed -i 's|#!/usr/bin/python|#!/usr/bin/python3|' \
  
 %install
 %py_install
-# Remove shebang from Python libraries
-for lib in %{buildroot}%{python3_sitelib}/%{sys_name}/{/,modules}/*.py; do
- sed '1{\@^#!/usr/bin/env python@d}' $lib > $lib.new &&
- touch -r $lib $lib.new &&
- mv $lib.new $lib
-done
- 
-# Remove shebang from Python libraries
-for lib in %{buildroot}%{python3_sitelib}/%{sys_name}/*.py; do
- sed '1{\@^#!/usr/bin/python@d}' $lib > $lib.new &&
- touch -r $lib $lib.new &&
- mv $lib.new $lib
-done
- 
- 
+
 %files
 %license LICENSE
 %doc README.md
