@@ -2,7 +2,7 @@
 
 Name:       nwg-panel
 Version:    0.9.50
-Release:    1
+Release:    2
 Summary:    GTK3-based panel for sway window manager and Hyprland Wayland compositors
 Group:      System/X11/Utilities/NWG 
 License:    MIT
@@ -22,7 +22,7 @@ Requires:   python3dist(i3ipc)
 Requires:   wlr-randr
 # Missing in OMV
 #Recommends: light
-#Recommends: playerctl
+Requires: playerctl
 #Recommends: pamixer
 Recommends: python3dist(netifaces)
 Recommends: python3dist(psutil)
