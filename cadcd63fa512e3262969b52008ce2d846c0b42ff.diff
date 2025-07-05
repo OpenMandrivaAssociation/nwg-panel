@@ -1,0 +1,13 @@
+diff --git a/nwg_panel/tools.py b/nwg_panel/tools.py
+index 2cbd9af..79e1ff5 100644
+--- a/nwg_panel/tools.py
++++ b/nwg_panel/tools.py
+@@ -240,7 +240,7 @@ def list_outputs(sway=False, silent=False):
+                                                    "y": y,
+                                                    "width": w,
+                                                    "height": h,
+-                                                   "description": f"{outputs[item]["make"]} {outputs[item]["model"]} {outputs[item]["serial"]}",
++                                                   "description": f'{outputs[item]["make"]} {outputs[item]["model"]} {outputs[item]["serial"]}',
+                                                    "monitor": None}
+ 
+             # swap for rotated displays
