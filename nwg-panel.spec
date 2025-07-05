@@ -2,12 +2,14 @@
 
 Name:       nwg-panel
 Version:    0.10.8
-Release:    1
+Release:    2
 Summary:    GTK3-based panel for sway window manager and Hyprland Wayland compositors
 Group:      System/X11/Utilities/NWG 
 License:    MIT
 URL:        https://github.com/nwg-piotr/nwg-panel
 Source:     https://github.com/nwg-piotr/nwg-panel/archive/refs/tags/v%{version}/%{name}-%{version}.tar.gz
+# Fix app starting in Python <3.12
+Patch0:     https://github.com/nwg-piotr/nwg-panel/commit/cadcd63fa512e3262969b52008ce2d846c0b42ff.diff
  
 BuildRequires: pkgconfig(python)
 BuildRequires: python3dist(setuptools)
