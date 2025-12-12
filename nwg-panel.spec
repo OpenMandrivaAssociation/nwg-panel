@@ -2,7 +2,7 @@
 
 Name:       nwg-panel
 Version:    0.10.12
-Release:    1
+Release:    2
 Summary:    GTK3-based panel for sway window manager and Hyprland Wayland compositors
 Group:      System/X11/Utilities/NWG 
 License:    MIT
