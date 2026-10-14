@@ -1,7 +1,7 @@
 %define _empty_manifest_terminate_build 0
 
 Name:       nwg-panel
-Version:    0.10.15
+Version:    0.12.1
 Release:    1
 Summary:    GTK3-based panel for sway window manager and Hyprland Wayland compositors
 Group:      System/X11/Utilities/NWG 
@@ -10,8 +10,8 @@ URL:        https://github.com/nwg-piotr/nwg-panel
 Source0:     https://github.com/nwg-piotr/nwg-panel/archive/refs/tags/v%{version}/%{name}-%{version}.tar.gz
 
  
-BuildRequires: pkgconfig(python)
-BuildRequires: python3dist(setuptools)
+BuildRequires: pkgconfig(python3)
+BuildRequires: python%{pyver}dist(setuptools)
 BuildRequires: pkgconfig(gtk-layer-shell-0)
 BuildArch:  noarch
  
@@ -19,15 +19,15 @@ Requires:   typelib(GtkLayerShell)
 Requires:   gtk+3.0
 Requires:   python-gobject3
 Requires:   python-gi
-Requires:   python3dist(i3ipc)
+Requires:   python%{pyver}dist(i3ipc)
 Requires:   wlr-randr
 # Missing in OMV
 #Recommends: light
 Requires: playerctl
 #Recommends: pamixer
-Recommends: python3dist(netifaces)
-Recommends: python3dist(psutil)
-Recommends: python3dist(pybluez)
+Recommends: python%{pyver}dist(netifaces)
+Recommends: python%{pyver}dist(psutil)
+Recommends: python%{pyver}dist(pybluez)
  
  
 %description
